@@ -1,4 +1,17 @@
-steps:
+name: Bridgecrew
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+      steps:
       - name: Checkout repo
         uses: actions/checkout@v2
 
