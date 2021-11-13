@@ -25,9 +25,9 @@ resource "aws_s3_bucket" "b" {
     enabled = true
   }
   logging {
-      target_bucket = "my-iac-demo-tf-logs-bucket"
-      target_prefix = "log/my-iac-demo-tf-test-bucket"
-   }
+    target_bucket = "my-iac-demo-tf-logs-bucket"
+    target_prefix = "log/my-iac-demo-tf-test-bucket"
+  }
 }
 
 resource "aws_s3_bucket_public_access_block" "access_good_b" {
