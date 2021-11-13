@@ -14,4 +14,14 @@ resource "aws_s3_bucket" "b" {
     git_repo             = "iac-aws-demo"
     yor_trace            = "ace51502-34ba-454d-9fa3-0062c9dbb0ff"
   }
+  server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "aws:kms"
+      }
+    }
+  }
+  versioning {
+    enabled = true
+  }
 }
