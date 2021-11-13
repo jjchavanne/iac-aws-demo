@@ -5,10 +5,10 @@ resource "aws_s3_bucket" "b" {
   tags = {
     Name                 = "My bucket"
     Environment          = "Dev"
-    git_commit           = "f672670f2705152c4dbe40e804e56461721e817a"
+    git_commit           = "fc343ce461edcb0f0590932ac99dd703e9302270"
     git_file             = "s3.tf"
-    git_last_modified_at = "2021-11-13 18:08:46"
-    git_last_modified_by = "jchavanne@paloaltonetworks.com"
+    git_last_modified_at = "2021-11-13 20:25:22"
+    git_last_modified_by = "31355989+jjchavanne@users.noreply.github.com"
     git_modifiers        = "31355989+jjchavanne/jchavanne"
     git_org              = "jjchavanne"
     git_repo             = "iac-aws-demo"
