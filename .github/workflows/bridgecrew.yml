@@ -1,7 +1,6 @@
 name: Bridgecrew
 on:
   pull_request: 
-    branches: [main]
   push:
     branches: [ main ]
   # Allows you to run this workflow manually from the Actions tab
