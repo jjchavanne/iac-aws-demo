@@ -16,7 +16,7 @@ jobs:
     - name: Run Bridgecrew 
       id: Bridgecrew
       uses: bridgecrewio/bridgecrew-action@master
-      with: api-key: ${{ secrets.BRIDGECREW_API_KEY }}
+      with: api-key: ${{ secrets.BC_API_KEY }}
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
