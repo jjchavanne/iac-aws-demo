@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "b" {
-  bucket = "my-iac-demo-tf-test-bucket"
+resource "aws_s3_bucket" "bucket" {
+  bucket = "my-iac-aws-demo-tf-test-bucket"
   acl    = "private"
 
   tags = {
@@ -27,14 +27,14 @@ resource "aws_s3_bucket" "b" {
   }
   logging {
     target_bucket = "my-iac-demo-tf-logs-bucket"
-    target_prefix = "log/my-iac-demo-tf-test-bucket"
+    target_prefix = "log/my-iac-aws-demo-tf-test-bucket"
   }
   hosted_zone_id = "Z3BJ6K6RIION7M"
   request_payer  = "BucketOwner"
 }
 
 resource "aws_s3_bucket_public_access_block" "access_good_b" {
-  bucket = aws_s3_bucket.b.id
+  bucket = aws_s3_bucket.bucket.id
 
   block_public_acls       = true
   block_public_policy     = true
