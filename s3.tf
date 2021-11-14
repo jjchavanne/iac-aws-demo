@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
   bucket = "my-iac-aws-demo-tf-test-bucket"
-  acl    = "private"
 
   tags = {
     Name                 = "My bucket"
@@ -32,6 +31,7 @@ resource "aws_s3_bucket" "bucket" {
   hosted_zone_id = "Z3BJ6K6RIION7M"
   request_payer  = "BucketOwner"
 }
+
 
 resource "aws_s3_bucket_public_access_block" "access_good_b" {
   bucket = aws_s3_bucket.bucket.id
