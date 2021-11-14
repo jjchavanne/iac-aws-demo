@@ -23,11 +23,14 @@ resource "aws_s3_bucket" "b" {
   }
   versioning {
     enabled = true
+    mfa_delete = false
   }
   logging {
     target_bucket = "my-iac-demo-tf-logs-bucket"
     target_prefix = "log/my-iac-demo-tf-test-bucket"
   }
+  hosted_zone_id = "Z3BJ6K6RIION7M"
+  request_payer = "BucketOwner"
 }
 
 resource "aws_s3_bucket_public_access_block" "access_good_b" {
