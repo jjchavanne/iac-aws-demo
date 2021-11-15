@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "bucket" {
     }
   }
   versioning {
-    enabled    = true
+    enabled    = false
     mfa_delete = false
   }
   logging {
@@ -31,6 +31,7 @@ resource "aws_s3_bucket" "bucket" {
   hosted_zone_id = "Z3BJ6K6RIION7M"
   request_payer  = "BucketOwner"
 }
+
 
 
 resource "aws_s3_bucket_public_access_block" "access_good_b" {
