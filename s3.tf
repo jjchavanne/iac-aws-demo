@@ -18,6 +18,7 @@ resource "aws_s3_bucket" "bucket" {
     enabled    = true
     mfa_delete = false
   }
+  
   logging {
     target_bucket = "my-iac-demo-tf-logs-bucket"
     target_prefix = "log/my-iac-aws-demo-tf-test-bucket"
