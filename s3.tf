@@ -25,6 +25,14 @@ resource "aws_s3_bucket" "bucket" {
   }
   hosted_zone_id = "Z3BJ6K6RIION7M"
   request_payer  = "BucketOwner"
+
+  server_side_encryption_configuration {
+ 	  rule {
+    	apply_server_side_encryption_by_default {
+      	sse_algorithm = "AES256"
+     	}
+  	}
+  }
 }
 
 
