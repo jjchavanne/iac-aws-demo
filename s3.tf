@@ -4,9 +4,9 @@ resource "aws_s3_bucket" "bucket" {
   tags = {
     Name                 = "My bucket"
     Environment          = "Dev"
-    git_commit           = "45842bcf2abe20c2cb24a85a3f064eeb6d798ba0"
+    git_commit           = "a861495e4048f9669527e99fa796aa3ac2c7b211"
     git_file             = "s3.tf"
-    git_last_modified_at = "2021-11-16 04:46:01"
+    git_last_modified_at = "2021-11-30 19:30:38"
     git_last_modified_by = "jchavanne@paloaltonetworks.com"
     git_modifiers        = "31355989+jjchavanne/jchavanne"
     git_org              = "jjchavanne"
@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "bucket" {
   }
 
   versioning {
-    enabled    = true
+    enabled    = false
     mfa_delete = false
   }
 
